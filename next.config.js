@@ -3,14 +3,14 @@
 import { readdirSync } from "fs";
 import { resolve, sep } from "path";
 
-const getTSModules = () =>
-  ["@swc-next"]
-    .map((scope) =>
-      readdirSync(resolve(`.${sep}node_modules${sep}${scope}`)).map(
-        (pkgName) => `${scope}/${pkgName}`
-      )
-    )
-    .flat();
+// const getTSModules = () =>
+//   ["@swc-next"]
+//     .map((scope) =>
+//       readdirSync(resolve(`.${sep}node_modules${sep}${scope}`)).map(
+//         (pkgName) => `${scope}/${pkgName}`
+//       )
+//     )
+//     .flat();
 
 const nextConfig = {
   reactStrictMode: false,
@@ -23,7 +23,7 @@ const nextConfig = {
   },
   output: "export",
   distDir: "out",
-  transpilePackages: getTSModules(),
+  // transpilePackages: getTSModules(),
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
