@@ -2,6 +2,7 @@
   "name": "swc-nextjs",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lit-labs/react": "^1.1.1",
+    "@spectrum-web-components/action-button": "^0.10.15",
+    "@spectrum-web-components/theme": "^0.14.14",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "next": "^13.2.5-canary.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "string-replace-loader": "^3.1.0",
     "typescript": "5.0.3"
   }
 }
