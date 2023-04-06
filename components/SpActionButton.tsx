@@ -1,9 +1,7 @@
 import {
-  //   ComponentPropsWithRef,
   ReactNode,
   RefAttributes,
   forwardRef,
-  ForwardedRef,
   PropsWithChildren,
   ComponentProps,
   Ref,
@@ -24,12 +22,17 @@ type ActionButtonPropsType = JSX.LibraryManagedAttributes<
   ComponentProps<typeof ActionButtonType>
 >;
 
+// Attempt - 1
+
 export const SpActionButton = dynamic<ActionButtonPropsType>(
-  () => import("./ActionButton").then(({ ActionButton }) => {
-    return ActionButton;
-  }),
+  () =>
+    import("./ActionButton").then(({ ActionButton }) => {
+      return ActionButton;
+    }),
   { ssr: false }
 );
+
+// Attempt - 2
 
 // const SpActionButtonInner = dynamic<ActionButtonPropsType>(
 //   () =>
